@@ -1,0 +1,30 @@
+<!--
+    props:
+    -> image: string;
+    -> text: string;
+    -> color: string must be css value in bootstrap;
+-->
+<div
+  [ngClass]="setClasses()"
+  class="d-flex flex-column align-items-center justify-content-around p-2"
+  style="border-radius: 30px; width: 177px; height: 176px"
+>
+  <img
+    class="d-block float-left py-2 w-100"
+    style="height: 135px; object-fit: contain"
+    [src]="image"
+    alt="task"
+  />
+  <div
+    *ngIf="!isExtended"
+    class="container d-flex justify-content-between text-white"
+  >
+    <label>{{ text | titlecase }}</label>
+    <img
+      class="btn p-0"
+      src="../../../assets/arrow-right.svg"
+      alt="arrow-right"
+      (click)="onClick()"
+    />
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div
+  class="container h-100 d-flex flex-column justify-content-around align-items-center"
+>
+  <app-fold-one></app-fold-one>
+  <div
+    class="container d-flex flex-column justify-content-around align-items-center"
+  >
+    showcase:
+    <app-button [red]="true" [text]="'button'"></app-button>
+    <app-thumb-card
+      [text]="'Task 1'"
+      [image]="'../assets/task1.svg'"
+      [color]="'bg-warning'"
+      [isExtended]="false"
+    ></app-thumb-card>
+    <app-thumb-card
+      [text]="'Task 2'"
+      [image]="'../assets/task2.svg'"
+      [color]="'bg-danger'"
+      [isExtended]="false"
+    ></app-thumb-card>
+  </div>
+</div>
