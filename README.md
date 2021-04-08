@@ -1,6 +1,12 @@
 # Teamio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+## On first run:
+
+### `git clone https://github.com/raffi23/Teamio.git`
+
+### `npm install`
+
+This project is under development and by no means an end product.
 
 ## Development server
 
