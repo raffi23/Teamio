@@ -1,0 +1,29 @@
+<div class="container wrapper">
+  <div class="section-one">
+    <h2 class="section-one__heading">
+      What can Teamio do for <br />
+      your business?
+    </h2>
+    <p class="section-one__paragraph">
+      Branding, Graphic design, UX, UI, Coading, Frontend and Backend, APIS and
+      more. we have a large <br />
+      diverse team capable of delivering you digiral products from start to
+      finish.
+    </p>
+    <img
+      class="section-one__image"
+      src="../../../assets/images/iphone.png"
+      alt="iphone"
+    />
+  </div>
+  <div class="section-two">
+    <h2 class="section-two__heading">Softwares and technologies we use</h2>
+    <div class="section-two__technologies">
+      <app-tech-icon
+        *ngFor="let tech of technologies"
+        [image]="tech.icon"
+        [title]="tech.title"
+      ></app-tech-icon>
+    </div>
+  </div>
+</div>

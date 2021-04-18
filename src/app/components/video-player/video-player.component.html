@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="vplayer" [ngClass]="!isPlaying && 'paused'">
+    <video #videoplayer class="vplayer__player"></video>
+    <div class="vplayer__background"></div>
+    <img
+      class="vplayer__control"
+      (click)="play()"
+      src="../../../assets/images/play.svg"
+      alt=""
+    />
+  </div>
+</div>

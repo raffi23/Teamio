@@ -1,0 +1,31 @@
+@import "../../../styles/abstract";
+@import "../../../styles/mixins";
+
+.section {
+  position: relative;
+
+  &__text {
+    @include adjust-font(
+      $mfs-h3-sm,
+      $fw-bold,
+      $fs-sm,
+      $fw-sbold,
+      $fs-sm,
+      $fw-sbold
+    );
+  }
+
+  &__shape {
+    position: absolute;
+    left: -13rem;
+    top: -10rem;
+    width: 20.625rem;
+    z-index: -1;
+
+    @media screen and (min-width: $window-lg) {
+      left: -15rem;
+      top: -22rem;
+      width: 28.125rem;
+    }
+  }
+}

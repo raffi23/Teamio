@@ -1,0 +1,68 @@
+@import "../../../styles/abstract";
+@import "../../../styles/mixins";
+
+.button {
+  padding: 0.5625rem 1.8125rem;
+  border: 2px solid;
+  border-radius: 2rem;
+  color: $primary-color-white;
+  transition: all 250ms ease-in-out;
+  font-size: $fs-xs;
+  font-weight: $fw-regular;
+  min-width: 10.375rem;
+  min-height: 2.9375rem;
+
+  &.has-shadow {
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &.large {
+    font-size: $fs-sm;
+  }
+
+  &.bold {
+    font-weight: $fw-sbold;
+  }
+}
+
+.primary {
+  &.teal {
+    @include primary-botton($primary-color-teal);
+  }
+
+  &.red {
+    @include primary-botton($primary-color-red);
+  }
+
+  &.yellow {
+    @include primary-botton($primary-color-yellow);
+  }
+}
+
+.secondary {
+  &.teal {
+    @include secondary-botton($primary-color-teal);
+  }
+
+  &.red {
+    @include secondary-botton($primary-color-red);
+  }
+
+  &.yellow {
+    @include secondary-botton($primary-color-yellow);
+  }
+}
+
+.gradient {
+  &.teal {
+    @include gradient-button($gradient-color-teal, $primary-color-teal);
+  }
+
+  &.red {
+    @include gradient-button($gradient-color-red, $primary-color-red);
+  }
+
+  &.yellow {
+    @include gradient-button($gradient-color-yellow, $primary-color-yellow);
+  }
+}

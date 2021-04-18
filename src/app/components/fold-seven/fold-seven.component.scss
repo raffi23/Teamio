@@ -1,0 +1,113 @@
+@import "../../../styles/abstract";
+@import "../../../styles/mixins";
+
+.wrapper {
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.section {
+  &__text {
+    @include adjust-font(
+      $mfs-h3-sm,
+      $fw-bold,
+      $fs-md,
+      $fw-sbold,
+      $fs-md,
+      $fw-sbold
+    );
+    text-align: center;
+    margin: 0 0 2rem 0;
+  }
+
+  &__cards {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+
+    @media screen and (min-width: $window-lg) {
+      overflow: unset;
+    }
+  }
+
+  &__scroll {
+    // flex: 0 0 10%;
+    display: flex;
+    // transform: translateX(calc(-300% - 2rem));
+
+    @media screen and (min-width: $window-lg) {
+      flex-wrap: wrap;
+      flex: 0 0 75%;
+    }
+  }
+
+  &__card {
+    // flex: 1 0 100%;
+    padding: 0 0.5rem;
+
+    @media screen and (min-width: $window-lg) {
+      flex: 0 0 33.33%;
+    }
+  }
+
+  &__social-image {
+    position: absolute;
+    top: 2rem;
+    right: 7rem;
+    width: 8.93rem;
+    height: 11.513125rem;
+    z-index: -1;
+
+    // @media screen and (min-width: $window-md) {
+    //   top: 0;
+
+    //   width: 21.16375rem;
+    //   height: 20.825rem;
+    // }
+
+    // @media screen and (min-width: $window-lg) {
+    //   top: 0;
+    //   right: -25.85rem;
+    //   width: 30.09375rem;
+    //   height: 32.338125rem;
+    // }
+    @media screen and (min-width: $window-xl) {
+      top: 8.5rem;
+      right: 0;
+      width: 18.05625rem;
+      height: 29.1043125rem;
+    }
+  }
+  &__stars-image,
+  &__star-image {
+    position: absolute;
+
+    left: 0;
+    z-index: -1;
+  }
+
+  &__stars-image {
+    display: none;
+
+    @media screen and (min-width: $window-lg) {
+      display: block;
+      width: 4.53125rem;
+      height: 6.10125rem;
+      top: -4rem;
+      left: -3rem;
+    }
+  }
+  &__star-image {
+    display: none;
+
+    @media screen and (min-width: $window-lg) {
+      display: block;
+      width: 0.9375rem;
+      height: 0.9375rem;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

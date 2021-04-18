@@ -1,0 +1,270 @@
+@import "../../../styles/abstract";
+@import "../../../styles/mixins";
+
+h1 {
+  @include adjust-font(
+    $mfs-h2-sm,
+    $fw-bold,
+    $fs-md,
+    $fw-bold,
+    $fs-lg,
+    $fw-bold
+  );
+}
+
+p {
+  @include adjust-font(
+    $mfs-p-lg,
+    $fw-regular,
+    $fs-b-sm,
+    $fw-regular,
+    $fs-b-sm,
+    $fw-sbold
+  );
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: $space-md;
+  margin-bottom: $space-lg;
+
+  &__shape-left,
+  &__shape-right {
+    position: absolute;
+    height: 40vw;
+    object-fit: contain;
+  }
+
+  &__shape-left {
+    left: calc(-1 * calc(100vw - 100%) / 2);
+    // top: 85%;
+    top: 85%;
+
+    @media screen and (min-width: $window-sm) {
+      top: 75%;
+    }
+    @media screen and (min-width: $window-md) {
+      top: 80%;
+    }
+    @media screen and (min-width: $window-lg) {
+      top: 75%;
+    }
+    @media screen and (min-width: $window-xl) {
+      top: 70%;
+    }
+  }
+
+  &__shape-right {
+    right: calc(-1 * calc(100vw - 100%) / 2);
+    // top: 55%;
+    top: 50%;
+
+    @media screen and (min-width: $window-sm) {
+      top: 35%;
+    }
+    @media screen and (min-width: $window-md) {
+      top: 40%;
+    }
+    @media screen and (min-width: $window-lg) {
+      top: 35%;
+    }
+    @media screen and (min-width: $window-xl) {
+      top: 20%;
+    }
+  }
+}
+
+.section-one {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 3.75rem 0;
+
+  @media screen and (min-width: $window-xl) {
+    margin: 0 0 1.5625rem 0;
+  }
+
+  &__heading-1 {
+    margin: 0 0 0.9375rem 0;
+  }
+
+  &__heading-2 {
+    position: relative;
+    margin: 0 0 0 1.5ch;
+
+    @media screen and (min-width: $window-md) {
+      margin: 0 0 1.5625rem 1.5ch;
+    }
+
+    @media screen and (min-width: $window-lg) {
+      margin: 0 0 2.8125rem 1.5ch;
+    }
+
+    @media screen and (min-width: $window-xl) {
+      margin: 0 0 0 1.5ch;
+    }
+  }
+
+  &__heading-3 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 2.5ch;
+    right: 0.8ch;
+
+    @media screen and (min-width: $window-md) {
+      top: 2.2ch;
+    }
+
+    @media screen and (min-width: $window-xl) {
+      position: static;
+      display: inline-block;
+      margin: 0 0 0 0.4ch;
+    }
+  }
+
+  &__span-1,
+  &__span-2 {
+    color: $primary-color-white;
+    padding: 0.5625rem 0.75rem;
+    border-radius: 6.25rem;
+  }
+
+  &__span-1 {
+    position: relative;
+    background-color: $primary-color-yellow;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../../../assets/images/curveshape.svg") no-repeat;
+      background-size: 100%;
+      z-index: -1;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &::before {
+      right: 1.22rem;
+      bottom: -2.5rem;
+    }
+
+    &::after {
+      transform: rotate(180deg);
+      right: -1.14rem;
+      bottom: -0.1rem;
+    }
+
+    @media screen and (min-width: $window-md) {
+      &::before {
+        right: 0.75rem;
+        bottom: -5rem;
+        width: 5rem;
+        height: 5rem;
+      }
+
+      &::after {
+        right: -2.3rem;
+        bottom: -0.47rem;
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+    @media screen and (min-width: $window-lg) {
+      &::before {
+        right: 1rem;
+        bottom: -6rem;
+        width: 6rem;
+        height: 6rem;
+      }
+
+      &::after {
+        right: -2.75rem;
+        bottom: -0.47rem;
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+
+  &__span-2 {
+    background-color: $primary-color-red;
+  }
+
+  &__toggle {
+    display: inline-block;
+    position: relative;
+    width: 1.778125rem;
+    height: 1.0775rem;
+    top: 0.05ch;
+    animation: 0.6s ease-in 1s 1 forwards animate_toggle_bg;
+    background: rgba(120, 120, 128, 0.16);
+    border-radius: 50px;
+    margin: 0 0 0 0.5625rem;
+
+    &::after {
+      position: absolute;
+      width: 0.97rem;
+      height: 0.97rem;
+      top: 50%;
+      left: 4%;
+      background: white;
+      clip-path: circle(49%);
+      transform: translateY(-50%);
+      animation: 0.6s ease-in-out 1s 1 forwards animate_toggle;
+      content: "";
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15),
+        0px 3px 1px rgba(0, 0, 0, 0.06);
+    }
+
+    @media screen and (min-width: $window-md) {
+      width: 2.4828125rem;
+      height: 1.5075rem;
+
+      &::after {
+        width: 1.32875rem;
+        height: 1.32875rem;
+        clip-path: circle(50%);
+      }
+    }
+    @media screen and (min-width: $window-lg) {
+      width: 3.1875rem;
+      height: 1.9375rem;
+
+      &::after {
+        width: 1.6875rem;
+        height: 1.6875rem;
+      }
+    }
+
+    @keyframes animate_toggle_bg {
+      to {
+        background-color: #34c759;
+      }
+    }
+    @keyframes animate_toggle {
+      to {
+        left: 42%;
+      }
+    }
+  }
+}
+
+.section-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__paragraph {
+    text-align: center;
+    width: 80%;
+    margin: 0 0 1.5625rem 0;
+  }
+
+  &__button {
+    margin: 0 0 3.4375rem 0;
+  }
+}

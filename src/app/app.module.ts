@@ -11,6 +11,19 @@ import { ThumbCardComponent } from './components/thumb-card/thumb-card.component
 import { NavbarExtrasComponent } from './components/navbar-extras/navbar-extras.component';
 import { HomeLandingComponent } from './pages/home-landing/home-landing.component';
 import { FoldOneComponent } from './components/fold-one/fold-one.component';
+import { FoldTwoComponent } from './components/fold-two/fold-two.component';
+
+import { FoldThreeComponent } from './components/fold-three/fold-three.component';
+import { FoldFourComponent } from './components/fold-four/fold-four.component';
+import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { FoldFiveComponent } from './components/fold-five/fold-five.component';
+import { FoldSixComponent } from './components/fold-six/fold-six.component';
+import { FoldSevenComponent } from './components/fold-seven/fold-seven.component';
+import { FoldEightComponent } from './components/fold-eight/fold-eight.component';
+import { FoldNineComponent } from './components/fold-nine/fold-nine.component';
+import { CardItemComponent } from './components/fold-seven/card-item/card-item.component';
+import { TechIconComponent } from './components/fold-nine/tech-icon/tech-icon.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +35,22 @@ import { FoldOneComponent } from './components/fold-one/fold-one.component';
     ThumbCardComponent,
     NavbarExtrasComponent,
     HomeLandingComponent,
-    FoldOneComponent
+    FoldOneComponent,
+    FoldTwoComponent,
+    FoldThreeComponent,
+    FoldFourComponent,
+    VideoPlayerComponent,
+    FoldFiveComponent,
+    FoldSixComponent,
+    FoldSevenComponent,
+    FoldEightComponent,
+    FoldNineComponent,
+    CardItemComponent,
+    TechIconComponent,
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

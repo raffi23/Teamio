@@ -1,0 +1,74 @@
+@import "./abstract";
+
+@mixin adjust-font(
+  $small,
+  $fw-small,
+  $medium: $small,
+  $fw-medium: $fw-small,
+  $large: $small,
+  $fw-large: $fw-small
+) {
+  font-size: $small;
+  font-weight: $fw-small;
+
+  @media screen and (min-width: $window-md) {
+    font-size: $medium;
+    font-weight: $fw-medium;
+  }
+
+  @media screen and (min-width: $window-lg) {
+    font-size: $large;
+    font-weight: $fw-large;
+  }
+}
+
+@mixin primary-botton($main-color) {
+  background: $main-color;
+  color: $primary-color-white;
+  border-color: transparent;
+
+  &:hover {
+    background: white;
+    color: $main-color;
+    border-color: $main-color;
+  }
+}
+
+@mixin secondary-botton($main-color) {
+  background: white;
+  color: $main-color;
+  border-color: $main-color;
+
+  &:hover {
+    background: $main-color;
+    color: $primary-color-white;
+    border-color: transparent;
+  }
+}
+
+@mixin gradient-button($main-color, $hover-color) {
+  $border-width: 2px;
+
+  position: relative;
+  background: $main-color;
+  border: none;
+  margin: $border-width;
+  background-size: 100%;
+
+  &:hover {
+    color: $hover-color;
+    background: white;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: calc(-1 * #{$border-width});
+    left: calc(-1 * #{$border-width});
+    height: calc(100% + #{$border-width} * 2);
+    width: calc(100% + #{$border-width} * 2);
+    border-radius: 2rem;
+    background: $main-color;
+  }
+}

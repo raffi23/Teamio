@@ -1,0 +1,73 @@
+@import "../../../styles/abstract";
+@import "../../../styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-one {
+  margin-bottom: $space-lg;
+
+  & > * {
+    margin-bottom: $space-md;
+  }
+
+  &__heading {
+    @include adjust-font(
+      $mfs-h3-sm,
+      $fw-bold,
+      $fs-md,
+      $fw-sbold,
+      $fs-md,
+      $fw-sbold
+    );
+  }
+
+  &__paragraph {
+    @include adjust-font(
+      $mfs-p-md,
+      $fw-regular,
+      $fs-p-md,
+      $fw-regular,
+      $fs-p-md,
+      $fw-regular
+    );
+  }
+
+  &__image {
+    filter: drop-shadow(0px 15px 15px rgba(0, 0, 0, 0.1));
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0 !important;
+
+    @media screen and (min-width: $window-md) {
+      height: 28.75rem;
+    }
+  }
+}
+
+.section-two {
+  width: 100%;
+
+  &__heading {
+    @include adjust-font(
+      $mfs-h3-sm,
+      $fw-bold,
+      $fs-md,
+      $fw-sbold,
+      $fs-md,
+      $fw-sbold
+    );
+
+    margin-bottom: $space-md;
+  }
+
+  &__technologies {
+    display: flex;
+    justify-content: space-between;
+  }
+}

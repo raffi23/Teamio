@@ -1,15 +1,25 @@
-<div
-  class="container-fluid d-flex align-items-center justify-content-between px-4 py-2"
->
-  <div
-    class="container p-0 m-0 navbar navbar-expand-md d-flex justify-content-between align-items-center"
-  >
-    <app-logo></app-logo>
-    <div class="navbar-nav">
-      <app-navbar-item [title]="'service'"></app-navbar-item>
-      <app-navbar-item [title]="'how it works'"></app-navbar-item>
-      <app-navbar-item [title]="'pricing'"></app-navbar-item>
+<div class="navbar__container container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light p-3">
+    <app-logo class="justify-self-center"></app-logo>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <app-navbar-item [title]="'service'"></app-navbar-item>
+        <app-navbar-item [title]="'how it works'"></app-navbar-item>
+        <app-navbar-item [title]="'pricing'"></app-navbar-item>
+      </div>
+      <app-navbar-extras class=""></app-navbar-extras>
     </div>
-  </div>
-  <app-navbar-extras></app-navbar-extras>
+  </nav>
 </div>

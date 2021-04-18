@@ -1,0 +1,16 @@
+@import "../../../styles/abstract";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__logo {
+  height: 1.3125rem;
+  object-fit: contain;
+
+  @media screen and (min-width: $window-sm) {
+    height: 2.3125rem;
+  }
+}

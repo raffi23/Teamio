@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./styles/typography";
+
+@font-face {
+  font-family: "Hellix";
+  src: url("./assets/fonts/Hellix-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Hellix;
+  src: url("./assets/fonts/Hellix-Medium.woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Hellix;
+  src: url("./assets/fonts/Hellix-SemiBold.woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Hellix;
+  src: url("./assets/fonts/Hellix-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Hellix;
+  src: url("./assets/fonts/Hellix-ExtraBold.woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Hellix;
+  src: url("./assets/fonts/Hellix-Black.woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+html,
+body {
+  min-height: 300px;
+  min-width: 300px;
+  font-family: "Hellix";
+}

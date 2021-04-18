@@ -1,0 +1,12 @@
+@import "./abstract";
+
+@mixin set-font($min-size, $max-size, $default-weight, $line-height) {
+  font-size: $min-size;
+  font-weight: $default-weight;
+  line-height: $line-height;
+  font-style: normal;
+
+  // @media screen and (min-width: $window-large) {
+  //   font-size: $max-size;
+  // }
+}

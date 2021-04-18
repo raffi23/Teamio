@@ -1,20 +1,45 @@
-<div class="container mt-5 d-flex flex-column align-items-center">
-  <h1 class="mb-5">
-    <div class="d-inline h-100"></div>
-    Say&nbsp;
-    <span class="text-white bg-info rounded-pill px-4 py-1">👋 goodbye</span>
-    to your <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;🧐 design &<span
-      class="bg-success text-white rounded-pill px-4 py-1"
-      >🤯 development</span
-    >
-    team
-    <img src="../../../assets/toggle-off.svg" alt="" />
-  </h1>
-  <p class="text-center mb-5">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat earum at
-    quos deleniti.
-  </p>
-  <app-button [teal]="true" [text]="'Try for free'" class="mb-5"></app-button>
-  <img src="../../../assets/laptop.svg" alt="" />
+<div class="container wrapper">
+  <div class="section-one">
+    <h1 class="section-one__heading-1">
+      Say
+      <span class="section-one__span-1">👋🏻 goodbye</span>
+      to your
+    </h1>
+    <h1 class="section-one__heading-2">
+      🧐 design & <span class="section-one__span-2">🤯 development</span>
+      <h1 class="section-one__heading-3">
+        team
+        <!-- &nbsp;&nbsp; -->
+        <div class="section-one__toggle"></div>
+      </h1>
+    </h1>
+  </div>
+  <div class="section-two">
+    <p class="section-two__paragraph">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat earum at
+      quos deleniti.
+    </p>
+    <app-button
+      class="section-two__button"
+      [color]="'teal'"
+      [text]="'Try for free'"
+      [shadow]="true"
+      [varient]="'gradient'"
+    ></app-button>
+    <img
+      class="section-two__laptop img-fluid"
+      src="../../../assets/images/laptop.png"
+      alt=""
+    />
+  </div>
+  <img
+    class="wrapper__shape-left"
+    src="../../../assets/images/laptop-shape-left.svg"
+    alt=""
+  />
+  <img
+    class="wrapper__shape-right"
+    src="../../../assets/images/laptop-shape-right.svg"
+    alt=""
+  />
 </div>

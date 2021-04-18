@@ -1,6 +1,11 @@
-<div class="d-flex align-items-center">
+<div
+  class="d-flex justify-content-lg-center justify-content-between align-items-center"
+>
   <app-navbar-item [title]="'login'"></app-navbar-item>
-  <button class="btn btn-outline-success shadow-lg px-4 rounded-pill">
-    {{ "try for free" | titlecase }}
-  </button>
+  <app-button
+    [color]="'teal'"
+    [text]="'Try for free'"
+    [varient]="'secondary'"
+    [shadow]="true"
+  ></app-button>
 </div>

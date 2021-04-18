@@ -1,0 +1,38 @@
+@import "../../../styles/abstract";
+@import "../../../styles/mixins";
+
+.wrapper {
+  margin-bottom: $space-lg;
+}
+
+.section {
+  &__text {
+    @include adjust-font(
+      $mfs-h3-sm,
+      $fw-bold,
+      $fs-md,
+      $fw-sbold,
+      $fs-md,
+      $fw-sbold
+    );
+    text-align: center;
+    margin: 0 0 $space-md 0;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__image {
+    width: 5.3125rem;
+    height: 3.125rem;
+    object-fit: contain;
+    width: 4rem;
+    height: 2.375rem;
+
+    @media screen and (min-width: $window-md) {
+      width: 5.3125rem;
+      height: 3.125rem;
+    }
+  }
+}

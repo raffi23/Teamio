@@ -1,0 +1,106 @@
+@import "../../../styles/abstract";
+@import "../../../styles/mixins";
+
+.wrapper {
+  margin-bottom: $space-lg;
+}
+
+.section-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 0 $space-md 0;
+
+  &__label {
+    @include adjust-font(
+      $mfs-h3-sm,
+      $fw-bold,
+      $fs-md,
+      $fw-sbold,
+      $fs-md,
+      $fw-sbold
+    );
+
+    margin: 0 0 $space-sm 0;
+  }
+
+  &__paragraph {
+    @include adjust-font(
+      $mfs-p-md,
+      $fw-regular,
+      $fs-p-md,
+      $fw-regular,
+      $fs-p-md,
+      $fw-regular
+    );
+
+    width: 85%;
+  }
+}
+
+.section-two {
+  &__label {
+    @include adjust-font(
+      $mfs-p-lg,
+      $fw-regular,
+      $fs-xs,
+      $fw-sbold,
+      $fs-xs,
+      $fw-sbold
+    );
+
+    text-align: center;
+    margin: 0 0 $space-md 0;
+  }
+
+  &__perks {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  &__perk {
+    flex: 1 0 50%;
+
+    @media screen and (min-width: $window-lg) {
+      flex: 1 1 25%;
+    }
+  }
+
+  &__perk-bg-1,
+  &__perk-bg-3 {
+    background-color: $primary-color-teal;
+  }
+  &__perk-bg-2,
+  &__perk-bg-4 {
+    background-color: $primary-color-green;
+  }
+
+  &__perk-label {
+    display: block;
+    @include adjust-font(
+      $mfs-h4-sm,
+      $fw-regular,
+      $mfs-h3-lg,
+      $fw-regular,
+      $mfs-h3-lg,
+      $fw-regular
+    );
+    padding: 0.9375rem 1.625rem;
+    border-radius: 6.25rem;
+    min-width: max-content;
+    margin: 0 0 $space-md 0;
+  }
+  &__perk-sublabel {
+    @include adjust-font(
+      $mfs-p-lg,
+      $fw-regular,
+      $fs-b-sm,
+      $fw-regular,
+      $fs-b-sm,
+      $fw-regular
+    );
+    text-align: center;
+  }
+}

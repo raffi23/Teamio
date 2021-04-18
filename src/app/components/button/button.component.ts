@@ -7,22 +7,26 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input() text: string;
-  @Input() red: boolean = false;
-  @Input() yellow: boolean = false;
-  @Input() teal: boolean = false;
+  @Input() color: 'red' | 'teal' | 'yellow';
+  @Input() shadow: boolean = false;
+  @Input() isLarge: boolean = false;
+  @Input() isBold: boolean = false;
+  @Input() varient: 'primary' | 'secondary' | 'gradient';
+  classes: object;
 
   constructor() {}
 
-  ngOnInit(): void {}
-
-  // [ngClass] method enables classes based on props
-  setClasses() {
-    let classes = {
-      'btn-danger': this.red,
-      'btn-warning': this.yellow,
-      'btn-info': this.teal,
+  ngOnInit(): void {
+    this.classes = {
+      red: this.color === 'red',
+      yellow: this.color === 'yellow',
+      teal: this.color === 'teal',
+      'has-shadow': this.shadow,
+      large: this.isLarge,
+      bold: this.isBold,
+      primary: this.varient === 'primary',
+      secondary: this.varient === 'secondary',
+      gradient: this.varient === 'gradient',
     };
-
-    return classes;
   }
 }
