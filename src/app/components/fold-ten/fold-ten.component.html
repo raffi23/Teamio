@@ -1,0 +1,13 @@
+<div class="container section">
+  <h2 class="section__heading">Softwares and technologies we use</h2>
+  <div class="section__technologies">
+    <div class="section__scroll">
+      <app-tech-icon
+        class="section__tech"
+        *ngFor="let tech of technologies"
+        [image]="tech.icon"
+        [title]="tech.title"
+      ></app-tech-icon>
+    </div>
+  </div>
+</div>

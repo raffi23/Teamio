@@ -49,25 +49,3 @@
     }
   }
 }
-
-.section-two {
-  width: 100%;
-
-  &__heading {
-    @include adjust-font(
-      $mfs-h3-sm,
-      $fw-bold,
-      $fs-md,
-      $fw-sbold,
-      $fs-md,
-      $fw-sbold
-    );
-
-    margin-bottom: $space-md;
-  }
-
-  &__technologies {
-    display: flex;
-    justify-content: space-between;
-  }
-}

@@ -1,0 +1,67 @@
+@import "../../../styles/abstract";
+@import "../../../styles/mixins";
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: $space-lg;
+  padding: 0;
+  margin: 0;
+
+  @media screen and (min-width: $window-sm) {
+    padding: 0 0.9375rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__heading {
+    @include adjust-font(
+      $mfs-h3-sm,
+      $fw-bold,
+      $fs-md,
+      $fw-sbold,
+      $fs-md,
+      $fw-sbold
+    );
+
+    margin-bottom: $space-md;
+  }
+
+  &__technologies {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__scroll {
+    display: flex;
+    justify-content: space-between;
+    animation: scroll-animation 18s linear infinite;
+
+    @media screen and (min-width: $window-sm) {
+      animation-play-state: paused;
+      transform: translateX(0) !important;
+    }
+  }
+
+  &__tech {
+    padding: 0 2rem;
+
+    @media screen and (min-width: $window-sm) {
+      padding: 0;
+    }
+  }
+
+  @keyframes scroll-animation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-80%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

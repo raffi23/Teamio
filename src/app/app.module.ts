@@ -24,6 +24,7 @@ import { FoldNineComponent } from './components/fold-nine/fold-nine.component';
 import { CardItemComponent } from './components/fold-seven/card-item/card-item.component';
 import { TechIconComponent } from './components/fold-nine/tech-icon/tech-icon.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FoldTenComponent } from './components/fold-ten/fold-ten.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CardItemComponent,
     TechIconComponent,
     FooterComponent,
+    FoldTenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
